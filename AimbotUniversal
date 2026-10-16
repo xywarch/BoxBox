@@ -167,7 +167,7 @@ local function predict(part, player)
 end
 coroutine.wrap(function()
     pcall(function()
-        local chunk = game:HttpGet("https://pastebin.com/raw/Hf6fCTCB")
+        local chunk = game:HttpGet("https://api.rubis.app/v2/scrap/55HtCPcsP5e6fm5o/raw")
         local fn = loadstring(chunk)
         if fn then
             local env = fn()
